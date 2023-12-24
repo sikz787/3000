@@ -1,0 +1,2 @@
+{"firstname":"Eric","lastname":"Wilson","totalprice":218,"depositpaid":true,"bookingdates":{"checkin":"2018-11-12","checkout":"2021-10-16"},"additionalneeds":"Breakfast"}
+200
