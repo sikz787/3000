@@ -40,7 +40,7 @@ def create():
     booking_id = data["bookingid"]
     print(booking_id)
     return booking_id
-    assert data["booking"]["firstname"] == "sik", "correct name"
+    assert data["booking"]["firstname"] == "sik", "correct name displayed"
 
 
 # put request we need url which includes booking id, headers with authorisation, id to make changes and also json payload data
