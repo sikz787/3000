@@ -6,11 +6,11 @@ import pytest
 def create_token():
     url = "https://restful-booker.herokuapp.com/auth"
     headers = {"Content-Type": "application/json"}
-    json= {
+    json = {
         "username": "admin",
         "password": "password123"
     }
-    response = requests.post(url=url,headers=headers, json=json)
+    response = requests.post(url=url, headers=headers, json=json)
     data = response.json()
     token = (data["token"])
     print(token)
@@ -21,9 +21,9 @@ def create_token():
 
 def test_put():
     url = "https://restful-booker.herokuapp.com/booking"
-    booking_id = "1685"
-    PUT_URL = url +"/"+booking_id
-    cookie_value = "token="+create_token()
+    booking_id = "str"
+    PUT_URL = url + "/" + booking_id
+    cookie_value = "token=" + create_token()
     headers = {
         "Content-Type": "application/json",
         "Cookie": cookie_value
@@ -46,4 +46,3 @@ def test_put():
     data = response.json()
     assert data["firstname"] == "sik", "correct name"
     print(data)
-

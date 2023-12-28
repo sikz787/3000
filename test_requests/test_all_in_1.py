@@ -48,7 +48,7 @@ def create():
 def test_put():
     url = "https://restful-booker.herokuapp.com/booking"
     booking_id = create()
-    PUT_URL = url + str(booking_id)
+    PUT_URL = url + "/" + str(booking_id)
     cookie_value = "token=" + create_token()
     headers = {
         "Content-Type": "application/json",
@@ -70,7 +70,7 @@ def test_put():
     response = requests.put(url=PUT_URL, headers=headers, json=json)
     assert response.status_code == 200
     data = response.json()
-    assert data["bookingid"] is not None
+    # assert data["booking_id"] is not None  - not needed in Put request
     assert data["firstname"] == "sik", "correct name"
     print(data)
 
