@@ -14,7 +14,8 @@ def test_2():
 
 
 def test_get_url():
-    my_get = requests.get("https://restful-booker.herokuapp.com/booking/1685")  # this can also be written as id = 9 and then url
+    my_get = requests.get(
+        "https://restful-booker.herokuapp.com/booking/1685")  # this can also be written as id = 9 and then url
     assert my_get.status_code == 200
     print(my_get.text)
     print(my_get.status_code)

@@ -78,7 +78,7 @@ def test_put():
 def test_delete():
     url = "https://restful-booker.herokuapp.com/booking"
     booking_id = create()
-    PUT_URL = url +"/"+str(booking_id)
+    PUT_URL = url + "/" + str(booking_id)
     cookie_value = "token=" + create_token()
     headers = {
         "Content-Type": "application/json",
