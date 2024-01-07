@@ -37,7 +37,7 @@ def create():
 
     data = response.json()
     # to keep id/booking id separate to use it in other methods
-    booking_id = data["bookingid"]
+    booking_id = (data["bookingid"])
     print(booking_id)
     return booking_id
     assert data["booking"]["firstname"] == "sik", "correct name displayed"
@@ -49,7 +49,7 @@ def test_put():
     url = "https://restful-booker.herokuapp.com/booking"
     booking_id = create()
     PUT_URL = url + "/" + str(booking_id)
-    cookie_value = "token=" + create_token()
+    cookie_value = "token" + create_token()
     headers = {
         "Content-Type": "application/json",
         "Cookie": cookie_value
@@ -79,7 +79,7 @@ def test_delete():
     url = "https://restful-booker.herokuapp.com/booking"
     booking_id = create()
     PUT_URL = url + "/" + str(booking_id)
-    cookie_value = "token=" + create_token()
+    cookie_value = "token" + create_token()
     headers = {
         "Content-Type": "application/json",
         "Cookie": cookie_value

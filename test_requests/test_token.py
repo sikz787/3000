@@ -23,7 +23,7 @@ def test_put():
     url = "https://restful-booker.herokuapp.com/booking"
     booking_id = "str"
     PUT_URL = url + "/" + booking_id
-    cookie_value = "token=" + create_token()
+    cookie_value = "token" + create_token()
     headers = {
         "Content-Type": "application/json",
         "Cookie": cookie_value

@@ -15,7 +15,7 @@ def test_2():
 
 def test_get_url():
     my_get = requests.get(
-        "https://restful-booker.herokuapp.com/booking/1685")  # this can also be written as id = 9 and then url
+        "https://restful-booker.herokuapp.com/booking/2133")  # this can also be written as id = 9 and then url
     assert my_get.status_code == 200
     print(my_get.text)
     print(my_get.status_code)
@@ -27,5 +27,5 @@ def test_get_url():
     assert 'lastname' in data, "any message to verify say - data present"
 
     # this is verification of data
-    assert data["firstname"] == "Jim", "firstname is Jim"
-    assert data["lastname"] == "Brown", "lastname is Brown"
+    assert data["firstname"] == "sikander", "firstname is Jim"
+    assert data["lastname"] == "Tyagi", "lastname is Brown"
